@@ -4,11 +4,18 @@ Docker Hello World Example
 --------------------------
 docker run hello-world
 
-#  docker build -t radhed/rrnginx ../ --> localtion should be root of Dockerfile
+Build new Docker image using Nginx server as Base
+------------------------------------------------
+ docker build -t radhed/rrnginx ../ --> localtion should be root of Dockerfile
 
-# docker run --name rrnginxserver4 -d -p 8081:9080 radhed/rrnginx
+Run Nginx server and Expose server port as 9080(Check EXPOSE command in Dockerfile)
+------------------------------------------------
+docker run --name rrnginxserver4 -d -p 8081:9080 radhed/rrnginx
 
-# docker run --name rrnginxserver2 -d -p 8080:80 radhed/rrnginx
+
+Run Nginx Server on 80 and expose external posr as 8080
+-------------------------------------------------------
+docker run --name rrnginxserver2 -d -p 8080:80 radhed/rrnginx
 
 List Docker process
 -----------------------
