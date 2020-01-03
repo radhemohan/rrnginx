@@ -1,3 +1,3 @@
 FROM nginx
 COPY myhtml /usr/share/nginx/html
-EXPOSE 9080
+#CMD ["echo","Nginx Server staretd and running succesfully"]
